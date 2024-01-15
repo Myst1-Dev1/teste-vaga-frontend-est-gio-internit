@@ -1,0 +1,59 @@
+.localization {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+   .container {
+    display: flex;
+    flex-direction: column;
+
+    .localizationSubtitles {
+        h2 {
+            font-weight: bold;
+        }
+
+        img {
+            width: 300px;
+        }
+    }
+
+    .locationItems {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        margin-top: 50px;
+
+        h3 {
+            font-weight: bold;
+        }
+
+        .locationBox {
+            display: flex;
+            gap: 10px;
+
+            .iconBox {
+                position: relative;
+                .locationIconFrame {
+                    width: 50px;
+                }
+
+                .itemIcon {
+                    width: 30px;
+                    position: absolute;
+                    left: 10px;
+                    top: -2px;
+                }
+            }
+        }
+    }
+   }
+
+   .map {
+    img {
+        width: 640px;
+        object-fit: cover;
+    }
+   }
+}

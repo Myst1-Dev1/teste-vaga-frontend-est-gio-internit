@@ -1,0 +1,37 @@
+.sideBar {
+    padding: 20px;
+    flex: 1;
+
+    .sidebarContainer {
+        position: fixed;
+        .imgContainer {
+            width: 100px;
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        nav {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            a {
+                color: #000;
+                transition: 0.3s;
+                font-size: 20px;
+    
+                &:hover {
+                    color: #FFB41D;
+                }
+            }
+    
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}

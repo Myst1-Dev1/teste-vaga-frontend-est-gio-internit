@@ -1,0 +1,61 @@
+.banner {
+    flex: 1;
+    background: url('../../assets/images/carouselItem1.png');
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    position: relative;
+
+    .container {
+
+        .bannerSubtitles {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+    
+            h2 {
+                font-weight: normal;
+                font-size: 40px;
+                
+                span {
+                    font-weight: bold;
+                }
+            }
+    
+            button {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                width: 200px;
+                transition: 0.3s;
+    
+                img {
+                    width: 24px;
+                }
+
+                &:hover {
+                    background-color: #FFB41D;
+                }
+            }
+        }
+
+        .imgContainer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 350px;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
