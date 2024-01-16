@@ -1,14 +1,20 @@
 import './styles.scss';
 
+import { useState } from 'react';
+
 import arrow1 from '../../assets/images/arrow1.png';
 import enterpriseImage1 from '../../assets/images/enterpriseImage1.png';
+import enterpriseImage2 from '../../assets/images/enterpriseImage2.png';
 import enterpriseImage3 from '../../assets/images/enterpriseImage3.png';
 import enterpriseImage4 from '../../assets/images/enterpriseImage4.png';
 import enterpriseImage5 from '../../assets/images/enterpriseImage5.png';
+import enterpriseImage6 from '../../assets/images/enterpriseImage6.png';
 import yellowLine from '../../assets/images/yellow line.png'
 import yellowFrame from '../../assets/images/yellowFrame.png';
 
 export function Enterprise() {
+    const [enterPriseImage, setEnterPriseImage] = useState(enterpriseImage1);
+
     return (
         <div className='enterprise' id='enterprise'>
             <div className='enterpriseSubtitles'>
@@ -23,7 +29,7 @@ export function Enterprise() {
                     duis. Amet massa, sit rhoncus leo laoreet habitant. Aliquam nullam risus duis curabitur.
                 </p>
                 <div className='imgContainer'>
-                    <img src={enterpriseImage3} alt="segunda imagem do emprendedor" />
+                    <img onClick={() => setEnterPriseImage(enterPriseImage === enterpriseImage2 ? enterpriseImage1 : enterpriseImage2)} src={enterPriseImage === enterpriseImage2 ? enterpriseImage6 : enterpriseImage3} alt="segunda imagem do emprendedor" />
                     <img src={enterpriseImage4} alt="terceira imagem do emprendedor" />
                     <img src={enterpriseImage5} alt="quinta imagem do emprendedor" />
                 </div>
@@ -36,15 +42,15 @@ export function Enterprise() {
                 </div>
             </div>
             <div>
-                <img src={enterpriseImage1} alt="primeira imagem do emprendedor" />
+                <img src={enterPriseImage} alt="primeira imagem do emprendedor" />
             </div>
 
             <div className='diamondArrow'>
-                    <div className='diamondImage'>
-                        <img src={yellowFrame} alt="frame amarelo" />
-                    </div>
-                    <img src={yellowLine} alt="linha amarela" />
+                <div className='diamondImage'>
+                    <img src={yellowFrame} alt="frame amarelo" />
                 </div>
+                <img src={yellowLine} alt="linha amarela" />
+            </div>
         </div>
     )
 }
