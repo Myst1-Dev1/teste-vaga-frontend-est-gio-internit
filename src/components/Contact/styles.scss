@@ -5,6 +5,7 @@
     background-size: cover;
     color: #fff;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
 
@@ -106,6 +107,20 @@
                         filter: brightness(0.8);
                     }
                 }
+            }
+        }
+    }
+}
+
+@media(max-width:430px) {
+    .contact {
+        img {
+            width: 300px;
+        }
+
+        .contactForm {
+            form{
+                max-width: 350px;
             }
         }
     }

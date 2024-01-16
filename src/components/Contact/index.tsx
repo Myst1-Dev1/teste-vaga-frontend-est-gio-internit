@@ -5,7 +5,7 @@ import yellowFrame from '../../assets/images/yellowFrame.png'
 
 export function Contact() {
     return (
-        <div className='contact'>
+        <div className='contact' id='contact'>
             <img src={contactFrame} alt="frame do contato" />
             <div className='contactForm'>
                 <h2>FICOU <br /> INTERESSADO?</h2>

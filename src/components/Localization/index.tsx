@@ -54,7 +54,7 @@ export function Localization() {
     ]
 
     return (
-        <div className='localization'>
+        <div className='localization' id='localization'>
             <div className='container'>
                 <div className='localizationSubtitles'>
                     <h2>LOCALIZAÇÃO</h2>

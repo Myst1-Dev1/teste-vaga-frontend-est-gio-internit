@@ -57,3 +57,15 @@
     }
    }
 }
+
+@media(max-width:430px) {
+    .localization {
+        padding: 10px;
+
+        .map {
+            img {
+                width: 350px;
+            }
+        }
+    }
+}

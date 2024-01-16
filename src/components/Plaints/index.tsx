@@ -8,7 +8,7 @@ import searchIcon from '../../assets/images/searchIcon.png';
 
 export function Plaints() {
     return (
-        <div className='plaints'>
+        <div className='plaints' id='plaints'>
             <div className='imgContainer'>
                 <img src={threeRooms} alt="imagem da planta de três quartos" />
             </div>

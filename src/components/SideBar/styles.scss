@@ -28,10 +28,97 @@
                     color: #FFB41D;
                 }
             }
+
+            .activeLink {
+                border-bottom: 2px solid #FFB41D;
+            }
     
             span {
                 font-size: 12px;
             }
         }
+
+        .closeResponsiveMenuButton {
+            display: none;
+        }
+    }
+}
+
+.openResponsiveMenuButton {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:430px) {
+    .sideBar {
+        flex: 0;
+        padding: 0;
+        
+        .active {
+            position: absolute;
+            left: 0;
+            z-index: 1000;
+            background-color: #fff;
+            width: 250px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+
+            .imgContainer {
+                width: 100px;
+                margin-top: 20px;
+                
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        
+            nav {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+        
+                
+                a {
+                    color: #000;
+                    transition: 0.3s;
+                    font-size: 20px;
+
+                    &:hover {
+                        color: #FFB41D;
+                    }
+                }
+        
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .sidebarContainer {
+            position: absolute;
+            left: -100%;
+            z-index: 1000;
+            background-color: #fff;
+            width: 250px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+    }
+
+    .openResponsiveMenuButton {
+        display: block;
     }
 }

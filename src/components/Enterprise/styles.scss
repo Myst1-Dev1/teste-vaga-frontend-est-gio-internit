@@ -82,3 +82,32 @@
             object-fit: cover;
         }
 }
+
+@media(max-width:430px) {
+    .enterprise {
+        margin: auto;
+        padding: 0 10px;
+        //justify-content: center;
+
+        .arrowSubtitle {
+            width: 250px;
+        }
+
+        img {
+            width: 350px;
+        }
+
+        .enterpriseSubtitles {
+            .imgContainer {
+                img {
+                    width: 70px;
+                    margin: auto;
+                }
+            }
+        }
+
+        .diamondArrow{
+            display: none;
+        }
+    }
+}

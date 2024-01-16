@@ -1,5 +1,6 @@
 .plaints {
     display: flex;
+    flex-wrap: wrap;
     gap:20px;
     min-height: 100vh;
     position: relative;
@@ -27,6 +28,7 @@
        .lineBox {
         display: flex;
         position: relative;
+        width: 200px;
 
         .yellowLineImage {
             img {
@@ -40,7 +42,7 @@
                 margin: auto;
                 position: absolute;
                 top: 10px;
-                right: 78px;
+                right: 0;
             }
         }
        }
@@ -75,6 +77,44 @@
         right: 0;
         img {
             width: 300px;
+        }
+    }
+}
+
+@media(max-width:430px) {
+    .plaints {
+        flex-direction: column;
+        margin-top: 20px;
+
+        .imgContainer {
+            img {
+                width: 350px;
+                min-height: 0;
+                object-fit: contain;
+            }
+        }
+
+        .searchBox {
+            bottom: 550px;
+
+            img {
+                width: 20px;
+            }
+        }
+
+        .plaintsSubtitles {
+            padding: 0 20px;
+            .lineBox{
+                .yellowFrameImage {
+                    img {
+                        top: 6px;
+                    }
+                }
+            }
+        }
+
+        .plantsFrame {
+            bottom: -500px;
         }
     }
 }

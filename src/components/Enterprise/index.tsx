@@ -10,10 +10,10 @@ import yellowFrame from '../../assets/images/yellowFrame.png';
 
 export function Enterprise() {
     return (
-        <div className='enterprise'>
+        <div className='enterprise' id='enterprise'>
             <div className='enterpriseSubtitles'>
                 <h2>O ENPREENDIMENTO</h2>
-                <img src={arrow1} alt="flecha de subtitulo" />
+                <img className='arrowSubtitle' src={arrow1} alt="flecha de subtitulo" />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra viverra nisl, id nullam
                     et morbi. Ornare ut est faucibus nec ut curabitur sagittis. Dui risus amet, sit morbi aliquet
