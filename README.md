@@ -32,3 +32,10 @@ de forma ampliada implementei 2 botões 1 para ampliar a imagem e o outro para r
 <p>Tive certa dificuldade em algumas partes, mas nada que uma boa pesquisada não resolva, afinal sou um programador e preciso saber como resolver problemas e pesquisando eu consigo fazer isso.</p>
 
 <p>Foi um projeto bem legal e uma ótima adição ao portfolio</p>
+
+## Foi utilizado neste teste
+
+<ul>
+  <li><h2>React- Framework Vite</h2></li>
+  <li><h2>Sass</h2></li>
+</ul>
