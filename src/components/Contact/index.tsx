@@ -2,8 +2,35 @@ import './styles.scss';
 
 import contactFrame from '../../assets/images/contactFrame.png';
 import yellowFrame from '../../assets/images/yellowFrame.png'
+import { FormEvent } from 'react';
 
 export function Contact() {
+
+    function phoneMask(value:string) {
+        if(!value) return "";
+        value = value.replace(/\D/g, '');
+        value = value.replace(/(\d{2})(\d)/, "($1) $2");
+        value = value.replace(/(\d)(\d{4})$/,"$1-$2");
+        return value;
+    }
+
+    function emailMask(value:string) {
+        if(!value) return "";
+        value = value.replace(/^(..).+?(?=..@)/, '$1***');
+        value = value.replace(/(@...).+?(?=\.\w+$)/, '$1***');
+        return value;
+    }
+
+    function handlePhone(e:FormEvent | any) {
+        let input = e.target;
+        input.value = phoneMask(input.value);
+    }
+
+    function handleEmail(e:FormEvent | any) {
+        let input = e.target;
+        input.value = emailMask(input.value);
+    }
+
     return (
         <div className='contact' id='contact'>
             <img src={contactFrame} alt="frame do contato" />
@@ -18,12 +45,12 @@ export function Contact() {
                         <img src={yellowFrame} alt="frame amarelo" />
                     </div>
                     <div className='inputBox'>
-                        <input type="tel" id='tel' required />
+                        <input onKeyUp={(e) => handlePhone(e)} maxLength={15} type="tel" id='tel' required />
                         <label htmlFor="tel">SEU TELEFONE</label>
                         <img src={yellowFrame} alt="frame amarelo" />
                     </div>
                     <div className='inputBox'>
-                        <input type="email" id='email' required />
+                        <input onKeyUp={(e) => handleEmail(e)} type="email" id='email' required />
                         <label htmlFor="email">SEU MELHOR EMAIL</label>
                         <img src={yellowFrame} alt="frame amarelo" />
                     </div>
