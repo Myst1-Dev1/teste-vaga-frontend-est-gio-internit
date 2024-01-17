@@ -18,7 +18,7 @@
         }
     }
 
-    .locationItems {
+    .locationItems, .mapItems {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -51,8 +51,68 @@
    }
 
    .map {
+    position: relative;
+
     img {
         width: 100%;
+    }
+    
+    .mapIconMarket1 {
+        top: 72%;
+        right: 30%;
+    }
+
+    .mapIconMarket2 {
+        top: 60%;
+        right: 28%;
+    }
+
+    .mapIconPetshop1 {
+        top: 70%;
+        left: 40%;
+    }
+
+    .mapIconBikeRack {
+        bottom: 20%;
+        right: 25%;
+    }
+
+    .mapIconPark {
+        top: 80%;
+        left: 20%;
+    }
+
+    .mapIconBank {
+        top: 65%;
+        left: 63%;
+    }
+
+    .mapIconMetroStation {
+        top: 42%;
+        right: 0;
+    }
+
+    .mapIconMarket1, 
+    .mapIconMarket2, 
+    .mapIconPetshop1, 
+    .mapIconBikeRack,
+    .mapIconPark,
+    .mapIconBank,
+    .mapIconMetroStation {
+        position: absolute;
+        .iconBox {
+            position: relative;
+            .locationIconFrame {
+                width: 30px;
+            }
+
+            .itemIcon {
+                width: 20px;
+                position: absolute;
+                left: 3px;
+                top: -2px;
+            }
+        }
     }
    }
 }
