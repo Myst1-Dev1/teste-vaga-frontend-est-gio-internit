@@ -7,19 +7,75 @@ import roof from '../../assets/images/roof.png';
 import yellowFrame from '../../assets/images/yellowFrame.png';
 import yellowLine from '../../assets/images/yellow line.png'
 import plantsFrame from '../../assets/images/plantsFrame.png';
-import searchIcon from '../../assets/images/searchIcon.png';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function Plaints() {
     const [plaintImage, setPlaintImage] = useState(threeRooms);
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [scale, setScale] = useState(1);
+
+    const imgRef = useRef(null);
+
+    function handleZoomIn() {
+        setScale((scale) => scale + 0.1);
+    }
+
+    function handleZoomOut() {
+        setScale((scale) => scale - 0.1);
+    }
+
+    useEffect(() => {
+        const image:any = imgRef.current;
+        let isDragging = false;
+        let prevPosition = { x: 0, y: 0 };
+    
+        const handleMouseDown = (e:MouseEvent) => {
+          isDragging = true;
+          prevPosition = { x: e.clientX, y: e.clientY };
+        };
+    
+        const handleMouseMove = (e:MouseEvent) => {
+          if (!isDragging) return;
+          const deltaX = e.clientX - prevPosition.x;
+          const deltaY = e.clientY - prevPosition.y;
+          prevPosition = { x: e.clientX, y: e.clientY };
+          setPosition((position) => ({
+            x: position.x + deltaX,
+            y: position.y + deltaY,
+          }));
+        };
+    
+        const handleMouseUp = () => {
+          isDragging = false;
+        };
+    
+        image?.addEventListener("mousedown", handleMouseDown);
+        image?.addEventListener("mousemove", handleMouseMove);
+        image?.addEventListener("mouseup", handleMouseUp);
+    
+        return () => {
+          image?.removeEventListener("mousedown", handleMouseDown);
+          image?.removeEventListener("mousemove", handleMouseMove);
+          image?.removeEventListener("mouseup", handleMouseUp);
+        };
+      }, [imgRef, scale]);
 
     return (
         <div className='plaints' id='plaints'>
             <div className='imgContainer'>
-                <img src={plaintImage} alt="imagem da planta de três quartos" />
-            </div>
-            <div className='searchBox'>
-                <img src={searchIcon} alt="icone para ampliar a imagem da planta" />
+                <div className='zoomButtons'>
+                    <button onClick={handleZoomIn}>+</button>
+                    <button onClick={handleZoomOut}>-</button>
+                </div>
+                <div className='roomImage'>
+                    <img 
+                        ref={imgRef} 
+                        src={plaintImage}
+                        alt="imagem da planta de três quartos"
+                        style={{transform: `scale(${scale}) translate(${position.x}px, ${position.y}px)`}}
+                        draggable={false} 
+                    />
+                </div>
             </div>
             <div className='plaintsSubtitles'>
                 <h2>PLANTAS</h2>

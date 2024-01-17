@@ -61,9 +61,9 @@ export function Banner() {
             </div>
 
             <div className='carouselButtons'>
-                <div className='button' onClick={() => handleCarouselChange(1)}></div>
-                <div className='button' onClick={() => handleCarouselChange(2)}></div>
-                <div className='button' onClick={() => handleCarouselChange(3)}></div>
+                <div className={`button ${carouselItemOne ? 'activeButton' : ''}`} onClick={() => handleCarouselChange(1)}></div>
+                <div className={`button ${carouselItemTwo ? 'activeButton' : ''}`} onClick={() => handleCarouselChange(2)}></div>
+                <div className={`button ${carouselItemThree ? 'activeButton' : ''}`} onClick={() => handleCarouselChange(3)}></div>
             </div>
         </div>
     )
