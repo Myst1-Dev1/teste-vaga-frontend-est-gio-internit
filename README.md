@@ -36,6 +36,6 @@ de forma ampliada implementei 2 botões 1 para ampliar a imagem e o outro para r
 ## Foi utilizado neste teste
 
 <ul>
-  <li><h2>React- Framework Vite</h2></li>
+  <li><h2>React - Framework Vite</h2></li>
   <li><h2>Sass</h2></li>
 </ul>
