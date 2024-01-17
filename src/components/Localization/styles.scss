@@ -123,9 +123,11 @@
         padding: 10px;
         flex-wrap: wrap;
         margin-top: 20px;
+        justify-content: center;
 
         .map {
             img {
+                margin-top: 30px;
                 object-fit: cover;
             }
         }
