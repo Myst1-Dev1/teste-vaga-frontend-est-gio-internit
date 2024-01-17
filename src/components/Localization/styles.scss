@@ -117,10 +117,17 @@
    }
 }
 
-@media(max-width:430px) {
+@media(max-width:991px) {
     .localization {
         min-height: unset;
         padding: 10px;
         flex-wrap: wrap;
+        margin-top: 20px;
+
+        .map {
+            img {
+                object-fit: cover;
+            }
+        }
     }
 }

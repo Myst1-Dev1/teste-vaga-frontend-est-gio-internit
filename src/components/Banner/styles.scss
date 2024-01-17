@@ -111,15 +111,16 @@
     }
 }
 
-@media(max-width:430px) {
+@media(max-width:991px) {
     .slidershow{
 
         .banner, .banner2, .banner3 {
             justify-content: center;
             align-items: center;
+            
             .container {
                 .imgContainer{
-                    width: 200px;
+                    width: 130px;
                 }
             }
         }
