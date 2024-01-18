@@ -22,7 +22,7 @@ export function Banner() {
                     <div className='bannerSubtitles'>
                         <h2>APOSTE NO <br /> <span>CONFORTO</span> SEM <br /> PERDER A <br /> <span>ELEGÂNCIA</span></h2>
                         <button>
-                            MARQUE UMA VISITA
+                            <a href='#contact'>MARQUE UMA VISITA</a>
                             <img src={yellowFrame} alt="frame amarelo" /> 
                         </button>
                     </div>
@@ -36,7 +36,7 @@ export function Banner() {
                     <div className='bannerSubtitles'>
                         <h2><span>LAZER</span> À UM PASSO</h2>
                         <button>
-                            MARQUE UMA VISITA
+                        <a href='#contact'>MARQUE UMA VISITA</a>
                             <img src={yellowFrame} alt="frame amarelo" /> 
                         </button>
                     </div>
@@ -50,7 +50,7 @@ export function Banner() {
                     <div className='bannerSubtitles'>
                         <h2>CRIE MEMORIAS <br /> COM <span>AMIGOS</span> <br /> E <span>FAMILIA</span></h2>
                         <button>
-                            MARQUE UMA VISITA
+                        <a href='#contact'>MARQUE UMA VISITA</a>
                             <img src={yellowFrame} alt="frame amarelo" /> 
                         </button>
                     </div>
