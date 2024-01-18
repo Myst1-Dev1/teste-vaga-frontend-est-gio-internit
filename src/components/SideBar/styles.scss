@@ -24,13 +24,11 @@
             a {
                 color: #000;
                 transition: 0.3s;
-                font-size: 34px;
+                font-size: 22px;
     
                 &:hover {
                     color: #FFB41D;
                 }
-
-                @media(max-width:1745px) { font-size: 28px; }
             
             }
             
