@@ -101,11 +101,29 @@
     }
 }
 
+@media(max-width:1200px) { 
+    .plaints {
+        gap: 35px;
+
+        .imgContainer {
+            order: 1;
+        }
+
+        .plaintsSubtitles {
+            .roomsContainer {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
 @media(max-width:991px) {
     .plaints {
         justify-content: center;
         min-height: unset;
-        margin-top: 20px;
+        max-width: 750px;
+        margin: auto;
+        margin-top: 40px;
 
         .imgContainer {
             .zoomButtons {

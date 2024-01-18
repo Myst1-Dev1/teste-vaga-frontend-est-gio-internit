@@ -80,7 +80,7 @@ export function Enterprise() {
                     <span>(Click e arraste)</span>
                 </div>
             </div>
-            <div>
+            <div className='enterpriseImage'>
                 <img src={enterPriseImage} alt="primeira imagem do emprendedor" />
             </div>
 

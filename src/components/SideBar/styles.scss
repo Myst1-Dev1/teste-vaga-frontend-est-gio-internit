@@ -1,6 +1,6 @@
 .sideBar {
     padding: 20px;
-    width: 330px;
+    width: 275px;
 
     .sidebarContainer, .active {
         position: fixed;
@@ -57,8 +57,6 @@
     display: none;
 }
 
-
-
 @media(max-width:991px) {
     .sideBar {
         flex: 0;
@@ -85,6 +83,15 @@
 
             .imgContainer {
                 margin-top: 20px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20px;
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }
