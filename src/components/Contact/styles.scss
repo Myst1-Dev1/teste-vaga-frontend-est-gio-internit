@@ -7,6 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 
 
     img {
@@ -111,6 +112,31 @@
             }
         }
     }
+
+    .copyright {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+
+        p{
+            font-weight: bold;
+            color: #000;
+            font-size: 8px;
+        }
+
+        .logoImage {
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            img {
+                max-width: 70px;
+                object-fit: contain;
+            }
+        }
+    }
 }
 
 @media(max-width:991px) {
@@ -125,6 +151,17 @@
             margin-top: 20px;
             form{
                 max-width: 350px;
+
+                .checkboxContainer {
+                    input[type="checkbox"]{
+                        width: 31px;
+                    }
+                }
+            }
+        }
+        .copyright {
+            p {
+                color: #fff;
             }
         }
     }

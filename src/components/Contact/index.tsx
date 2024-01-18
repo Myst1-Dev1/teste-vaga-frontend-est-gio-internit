@@ -4,6 +4,8 @@ import contactFrame from '../../assets/images/contactFrame.png';
 import yellowFrame from '../../assets/images/yellowFrame.png'
 import { FormEvent } from 'react';
 
+import internitLogo from '../../assets/images/internitLogo.png';
+
 export function Contact() {
 
     function phoneMask(value:string) {
@@ -50,7 +52,7 @@ export function Contact() {
                         <img src={yellowFrame} alt="frame amarelo" />
                     </div>
                     <div className='inputBox'>
-                        <input onKeyUp={(e) => handleEmail(e)} type="email" id='email' required />
+                        <input onKeyUp={(e) => handleEmail(e)} type="text" id='email' required />
                         <label htmlFor="email">SEU MELHOR EMAIL</label>
                         <img src={yellowFrame} alt="frame amarelo" />
                     </div>
@@ -63,6 +65,12 @@ export function Contact() {
                         <button>ENVIAR</button>
                     </div>
                 </form>
+            </div>
+            <div className='copyright'>
+                <p>Desenvolvido por</p>
+                <div className='logoImage'>
+                    <img src={internitLogo} alt="logo da empresa na qual o teste se destina" />
+                </div>
             </div>
         </div>
     )
