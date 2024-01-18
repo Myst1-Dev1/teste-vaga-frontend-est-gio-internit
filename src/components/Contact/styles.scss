@@ -10,10 +10,12 @@
     position: relative;
 
 
-    img {
-        width: 400px;
-        object-fit: contain;
-        margin-top: -200px;
+    .imgContainer {
+        img {
+            max-width: 400px;
+            object-fit: contain;
+            margin-top: -200px;
+        }
     }
 
     .contactForm {
@@ -142,9 +144,14 @@
 @media(max-width:991px) {
     .contact {
         margin-top: 20px;
-        img {
-            width: 200px;
-            margin-top: -30px;
+        
+        .imgContainer {
+            width: 100%;
+
+            img {
+                max-width: 200px;
+                margin-top: -30px;
+            }
         }
 
         .contactForm {

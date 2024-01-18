@@ -1,34 +1,39 @@
 .sideBar {
     padding: 20px;
-    flex: 1;
+    width: 330px;
 
     .sidebarContainer, .active {
         position: fixed;
+
         .imgContainer {
             width: 100px;
+            margin-top: 25px;
             
             img {
-                width: 100%;
+                max-width: 180px;
                 object-fit: cover;
             }
         }
     
         nav {
-            margin-top: 20px;
+            margin-top: 45px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 18px;
     
             a {
                 color: #000;
                 transition: 0.3s;
-                font-size: 20px;
+                font-size: 34px;
     
                 &:hover {
                     color: #FFB41D;
                 }
-            }
 
+                @media(max-width:1745px) { font-size: 28px; }
+            
+            }
+            
             .activeLink {
                 border-bottom: 2px solid #FFB41D;
             }
@@ -53,6 +58,8 @@
     cursor: pointer;
     display: none;
 }
+
+
 
 @media(max-width:991px) {
     .sideBar {

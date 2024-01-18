@@ -35,7 +35,9 @@ export function Contact() {
 
     return (
         <div className='contact' id='contact'>
-            <img src={contactFrame} alt="frame do contato" />
+            <div className='imgContainer'>
+                <img src={contactFrame} alt="frame do contato" />
+            </div>
             <div className='contactForm'>
                 <h2>FICOU <br /> INTERESSADO?</h2>
                 <p>Preencha o formulário abaixo e um de <br /> nossos consultores entrará em contato.</p>
